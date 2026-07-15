@@ -33,5 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // NAV HOOKS
 
+  if (window.CikadaVideoScrub) {
+    window.CikadaVideoScrub.initVideoScrub('hero');
+  }
+
   // FEATURE INIT HOOKS
 });
