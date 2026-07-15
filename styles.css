@@ -164,6 +164,20 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 
 /* ===== CONCEPT ===== */
+.concept__body {
+  max-width: 640px;
+  margin: 40px auto 0;
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 1.7;
+  color: var(--color-fg);
+}
+.concept__body p { margin: 0 0 28px; }
+.concept__closing {
+  font-family: var(--font-mono);
+  color: var(--color-signal);
+  letter-spacing: 0.05em;
+}
 
 /* ===== REGISTER ===== */
 
