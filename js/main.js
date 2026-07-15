@@ -31,7 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
     );
   });
 
-  // NAV HOOKS
+  const loginLink = document.querySelector('.nav__login');
+  if (loginLink) {
+    loginLink.addEventListener('click', (event) => event.preventDefault());
+  }
 
   if (window.CikadaVideoScrub) {
     window.CikadaVideoScrub.initVideoScrub('hero');
