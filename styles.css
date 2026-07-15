@@ -131,6 +131,23 @@ ul { list-style: none; margin: 0; padding: 0; }
 /* section__video/scrim/content/city__sub shared with HERO block above */
 
 /* ===== SIGNAL ===== */
+.signal__bars { width: 100%; height: 160px; margin-top: 40px; }
+.signal__ticker {
+  display: block;
+  font-family: var(--font-mono);
+  white-space: nowrap;
+  overflow: hidden;
+  color: var(--color-signal-dim);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  margin-top: 24px;
+  animation: signal-scroll 40s linear infinite;
+}
+@keyframes signal-scroll {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+.signal__note { margin-top: 24px; color: var(--color-fg-dim); }
 
 /* ===== ROUTE ===== */
 

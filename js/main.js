@@ -38,5 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
     window.CikadaVideoScrub.initVideoScrub('city');
   }
 
+  if (window.CikadaSignalWave) {
+    window.CikadaSignalWave.initSignalWave('signal');
+  }
+
   // FEATURE INIT HOOKS
 });
