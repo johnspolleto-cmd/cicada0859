@@ -42,5 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
     window.CikadaSignalWave.initSignalWave('signal');
   }
 
+  if (window.CikadaRouteMap) {
+    window.CikadaRouteMap.initRouteMap('route');
+  }
+
   // FEATURE INIT HOOKS
 });

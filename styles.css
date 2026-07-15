@@ -150,6 +150,18 @@ ul { list-style: none; margin: 0; padding: 0; }
 .signal__note { margin-top: 24px; color: var(--color-fg-dim); }
 
 /* ===== ROUTE ===== */
+.route__map { width: 100%; max-width: 800px; margin: 40px auto 0; }
+.route__path { filter: drop-shadow(0 0 6px rgba(77, 255, 196, 0.5)); }
+.route__point { fill: var(--color-amber); visibility: hidden; opacity: 0; }
+.route__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+  margin-top: 24px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-fg-dim);
+}
 
 /* ===== CONCEPT ===== */
 
