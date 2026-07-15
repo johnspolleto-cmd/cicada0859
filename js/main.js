@@ -46,5 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
     window.CikadaRouteMap.initRouteMap('route');
   }
 
+  if (window.CikadaWaitlistForm) {
+    window.CikadaWaitlistForm.initWaitlistForm('waitlist-form');
+  }
+
   // FEATURE INIT HOOKS
 });
