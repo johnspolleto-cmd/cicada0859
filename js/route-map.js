@@ -14,6 +14,14 @@ function initRouteMap(sectionId) {
   path.style.strokeDasharray = String(length);
   path.style.strokeDashoffset = String(length);
 
+  if (window.CikadaReducedMotion) {
+    path.style.strokeDashoffset = '0';
+    points.forEach((point) => {
+      gsap.set(point, { autoAlpha: 1 });
+    });
+    return;
+  }
+
   gsap.to(path, {
     strokeDashoffset: 0,
     ease: 'none',

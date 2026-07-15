@@ -45,6 +45,11 @@ function initSignalWave(sectionId) {
     });
   };
 
+  if (window.CikadaReducedMotion) {
+    draw();
+    return;
+  }
+
   gsap.ticker.add(() => {
     for (let i = 0; i < bars.length; i += 1) {
       bars[i] += (Math.random() - 0.5) * 0.15;

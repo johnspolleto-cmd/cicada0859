@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined' || typeof Lenis === 'undefined') {
+    document.querySelectorAll('.reveal').forEach((el) => {
+      el.style.visibility = 'visible';
+    });
+    document.querySelectorAll('.route__point').forEach((el) => {
+      el.style.visibility = 'visible';
+      el.style.opacity = '1';
+    });
+    return;
+  }
+
   const lenis = new Lenis({
     duration: 1.2,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -6,6 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   gsap.registerPlugin(ScrollTrigger);
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.CikadaReducedMotion = prefersReducedMotion;
 
   lenis.on('scroll', ScrollTrigger.update);
   gsap.ticker.add((time) => {
@@ -14,6 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
   gsap.ticker.lagSmoothing(0);
 
   document.querySelectorAll('.reveal').forEach((el) => {
+    if (prefersReducedMotion) {
+      gsap.set(el, { autoAlpha: 1 });
+      return;
+    }
     gsap.fromTo(
       el,
       { autoAlpha: 0, y: 24 },
