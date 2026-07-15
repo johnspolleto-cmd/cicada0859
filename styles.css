@@ -128,6 +128,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .section--poster-fallback .section__video { opacity: 0; }
 
 /* ===== CITY ===== */
+/* section__video/scrim/content/city__sub shared with HERO block above */
 
 /* ===== SIGNAL ===== */
 

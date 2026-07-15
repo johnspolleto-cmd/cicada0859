@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (window.CikadaVideoScrub) {
     window.CikadaVideoScrub.initVideoScrub('hero');
+    window.CikadaVideoScrub.initVideoScrub('city');
   }
 
   // FEATURE INIT HOOKS
