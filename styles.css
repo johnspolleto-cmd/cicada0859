@@ -125,7 +125,22 @@ ul { list-style: none; margin: 0; padding: 0; }
   color: var(--color-fg-dim);
   max-width: 480px;
 }
-.section--poster-fallback .section__video { opacity: 0; }
+/* Видео с ошибкой загрузки само остаётся на своём poster — прятать его нельзя. */
+.section--poster-fallback .section__video { opacity: 1; }
+
+/* ===== MATRIX CICADA (заглушка hero, пока нет видео) ===== */
+.hero-matrix {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.4s ease;
+}
+.section--matrix-active .hero-matrix { opacity: 1; }
+.section--matrix-active .section__video { display: none; }
 
 /* ===== CITY ===== */
 /* section__video/scrim/content/city__sub shared with HERO block above */

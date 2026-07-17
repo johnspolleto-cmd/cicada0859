@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
       el.style.visibility = 'visible';
       el.style.opacity = '1';
     });
+    if (window.CikadaMatrixCicada) {
+      window.CikadaMatrixCicada.initMatrixCicada('hero');
+    }
     return;
   }
 
@@ -53,9 +56,22 @@ document.addEventListener('DOMContentLoaded', () => {
     loginLink.addEventListener('click', (event) => event.preventDefault());
   }
 
+  document.querySelectorAll('a[href^="#"]:not(.nav__login)').forEach((link) => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (!target) return;
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      lenis.scrollTo(target, { duration: prefersReducedMotion ? 0 : 1.4 });
+    });
+  });
+
   if (window.CikadaVideoScrub) {
     window.CikadaVideoScrub.initVideoScrub('hero');
     window.CikadaVideoScrub.initVideoScrub('city');
+  }
+
+  if (window.CikadaMatrixCicada) {
+    window.CikadaMatrixCicada.initMatrixCicada('hero');
   }
 
   if (window.CikadaSignalWave) {

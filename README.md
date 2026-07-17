@@ -14,7 +14,7 @@ python3 -m http.server 8000
 
 | Что | Где | Чем заменить |
 |---|---|---|
-| `assets/video/night-road.mp4` | Hero-секция | Реальное видео ночной дороги/города (см. `assets/video/README.md`) |
+| `assets/video/night-road.mp4` | Hero-секция | Реальное видео ночной дороги/города (см. `assets/video/README.md`). Пока файла нет, hero показывает живую цикаду из зелёной матрицы цифр (`js/matrix-cicada.js`) — она отключится сама, как только видео загрузится |
 | `assets/video/city-drift.mp4` | Секция "ГОРОД СТАНЕТ ШИФРОМ." | Реальное видео проезда/прохода по городу |
 | `assets/posters/*.webp` | `poster` у обоих `<video>` | Пересоздать через `scripts/generate-posters.sh` или заменить вручную |
 | `[ДАТА]` | `index.html`, секция `#register` | Дата проведения квеста |
